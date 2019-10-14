@@ -6,5 +6,6 @@ ENV LANG="en_US.UTF-8" \
 RUN apk --update add git openssh nano && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
+COPY ./test-autodeploy.txt /
 WORKDIR /
 CMD ["/bin/sh"]
